@@ -1,5 +1,6 @@
 import { RealPlayer } from './classes/RealPlayer';
 import { BotPlayer } from "./classes/BotPlayer";
+import { CardDealer } from './classes/CardDealer';
 
 
 const players = [
