@@ -1,12 +1,14 @@
+import { CardSelectionService } from './services/CardSelectionService';
 import { AbstractPlayer } from "./AbstractPlayer";
 
 export class BotPlayer extends AbstractPlayer{
   
-    constructor(max: number) {
-      super(max)
-  }
+  //   constructor(max: number) {
+  //     super(max)
+  // }
 
   requestCard():boolean{
-    return true;
+    const cardSelectionService = new CardSelectionService();
+    return cardSelectionService.decide();
   }
 }
