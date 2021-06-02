@@ -24,7 +24,13 @@ export abstract class AbstractPlayer implements PlayerBehavior {
   getSum(): number {
     return this.holdings
       .map((card: Card) => card.name)
-      .reduce((acc, next) => acc + next);
+      .reduce((acc, next) => {
+        if(['J','Q','K'].indexOf(next) > -1){
+          next = 10;
+        } else if (next ==='A'){
+          next = 11;
+        } 
+      });
   }
 
   announceCards(): void {

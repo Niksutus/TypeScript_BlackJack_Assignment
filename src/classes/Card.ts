@@ -1,3 +1,7 @@
 export class Card {
-    name: number = Math.floor(Math.random()*14) +1;
+    name: number | string;
+    
+    constructor(num: number | string){
+        this.name = num;
+    };
 }
